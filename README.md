@@ -16,7 +16,7 @@ sudo apt-get install -y nodejs
 sudo apt-get install -y gconf-service libgbm-dev libasound2 libatk1.0-0 libc6 libcairo2 libcups2 libdbus-1-3 libexpat1 libfontconfig1 libgcc1 libgconf-2-4 libgdk-pixbuf2.0-0 libglib2.0-0 libgtk-3-0 libnspr4 libpango-1.0-0 libpangocairo-1.0-0 libstdc++6 libx11-6 libx11-xcb1 libxcb1 libxcomposite1 libxcursor1 libxdamage1 libxext6 libxfixes3 libxi6 libxrandr2 libxrender1 libxss1 libxtst6 ca-certificates fonts-liberation libappindicator1 libnss3 lsb-release xdg-utils
 ```
 
-## How to run GPU acceleration test and three.js rendering test locally
+## How to locally run GPU acceleration test and three.js rendering test
 ```shell
 npm run test
 ```
@@ -38,8 +38,6 @@ sudo docker run -it --rm --net=host $USER/docker-webgl:latest
 podman build -f Dockerfile -t $USER/docker-webgl
 xhost +local:
 podman run -i -t --rm --network=host -v /tmp/.X11-unix:/tmp/.X11-unix -v /dev/dri:/dev/dri --security-opt=label=type:container_runtime_t -e DISPLAY=$DISPLAY $USER/docker-webgl:latest
-
-podman run -i -t --rm $USER/docker-webgl:latest
 ```
 
 ## Known method of running using Docker using docker run arguments
