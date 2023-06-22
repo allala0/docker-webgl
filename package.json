@@ -1,0 +1,13 @@
+{
+  "name": "docker-webgl",
+  "type": "module",
+  "version": "0.0.0",
+  "description": "WebGL in Docker container",
+  "scripts": {
+    "test": "node src/index.js"
+  },
+  "dependencies": {
+    "puppeteer": "^20.6.0",
+    "three": "^0.153.0"
+  }
+}
